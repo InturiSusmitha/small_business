@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Home</title>
+     <!-- firebase link -->
+     <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.8.1/firebase-app-compat.min.js"
+     integrity="sha512-MMTxQovZQ+k7pTSxWbDc0g/5hMB9RDFFMj0wgSQz1+NXwV/T56YFmDkYkuBqEh9WfSw0dNX6g/rsNcLy870oFA=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+   <!-- firebase auth link -->
+   <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.8.1/firebase-auth-compat.min.js"
+     integrity="sha512-lMP2iMXZtq9hwmVBL8Yd7oqr9ECfT0Oa363/FjW8XZKoTC11kxTeFpmp0mYoFcph0yAy5WvvlqwldgwlUPjv6g=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+
+   <!-- firebase databse link -->
+   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="my-nav navbar navbar-light navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="logo1.png"><img src="logo1.png" alt="" width="50" height="60"> </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="contact.html"
+                  >CONTACT US<span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="index.html  "
+                  onclick="signOut()"
+                  >LOGOUT</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide my-carousel my-carousel"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div
+            class="carousel-item active"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('img3.jpg')"
+          ></div>
+          <div
+            class="carousel-item"
+            style="background-image: url('img15.webp')"
+          ></div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="row w-75" style="padding-top: 10%;padding-left: 15%;">
+        <div class="col w-75">
+            <div class="card" style="width: 18rem;">
+                <img src="img9.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">The products we sell are best in quality and are premium in nature. we take care in maintainance.</p>
+                </div>
+              </div>
+              </div>
+              <div class="col w-75">
+                <div class="card" style="width: 18rem;">
+                    <img src="img10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">We provide the best quality products at a mainimum price and best price comapared to the market.</p>
+                    </div>
+              </div>
+        </div>
+        
+      </div>
+      <div class="row w-75" style="padding-top: 5%;padding-left: 15%;">
+        <div class="col w-75">
+            <div class="card" style="width: 18rem;">
+                <img src="img12.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">We have all the products displayed with images on our onine website. Rewiew it and order in one click on the website. </p>
+                </div>
+              </div>
+              </div>
+              <div class="col w-75">
+                <div class="card" style="width: 18rem;">
+                    <img src="img4.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">We provide a slot to send your queries and enquire about products in contact us page.</p>
+                    </div>
+              </div>
+        </div>
+        
+      </div>
+    </header>
+    <script src="../js/firebase.js"></script>
+    <script>
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // ...
+        } else {
+          // window.open("login.html");
+          window.location.href = "login.html";
+        }
+      });
+    </script>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"
+  ></script>
+</html>
